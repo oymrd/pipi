@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Grabber Example</title>
+    <script>
+        // Function to log the IP address
+        async function logIPAddress() {
+            try {
+                let response = await fetch('log_ip.php');
+                let data = await response.json();
+                console.log('IP logged successfully');
+            } catch (error) {
+                console.error('Error logging IP address:', error);
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = logIPAddress;
+    </script>
+</head>
+<body>
+    <h1>Welcome to the IP Grabber Example</h1>
+</body>
+</html>
